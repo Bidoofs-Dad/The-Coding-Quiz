@@ -21,3 +21,20 @@ header {
 #viewHighScores {
     color: rgb(249, 42, 228);
 }
+
+/* The below will be the basis for the buttons of the questions */
+/* .form {
+    display: flex;
+    justify-content: space-around;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    background-color: aqua;
+    margin: 5px;
+    color: #a41414;
+} */
