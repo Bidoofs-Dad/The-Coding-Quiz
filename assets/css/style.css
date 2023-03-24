@@ -23,7 +23,7 @@ header {
 }
 
 /* The below will be the basis for the buttons of the questions */
-/* .form {
+.form {
     display: flex;
     justify-content: space-around;
 }
@@ -37,4 +37,5 @@ input {
     background-color: aqua;
     margin: 5px;
     color: #a41414;
-} */
+}
+
