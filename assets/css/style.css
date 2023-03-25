@@ -32,8 +32,8 @@ form {
     flex-direction: column;
 } */
 
-#testForm {
-    text-align: center;
+#testForm,
+#testForm2 {
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -42,13 +42,16 @@ form {
 }
 
 
+
+
 input {
     margin: 5px;
     color: aqua;
     background-color: purple;
     height: 45px;
-    width: 150px;
+    width: 250px;
     font-size: 20px;
     border-radius: 10px;
+    text-align: start;
 }
 
