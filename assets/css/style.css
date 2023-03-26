@@ -33,7 +33,10 @@ form {
 } */
 
 #testForm,
-#testForm2 {
+#testForm2,
+#testForm3,
+#testForm4,
+#testForm5 {
     display: none;
     flex-direction: column;
     justify-content: space-around;

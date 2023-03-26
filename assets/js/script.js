@@ -3,6 +3,9 @@ var startQuizEl = document.querySelector("#startQuiz")
 var paragraphEl = document.querySelector("#paragraph")
 var testEl = document.querySelector("#testForm")
 var testEl2 = document.querySelector("#testForm2")
+var testEl3 = document.querySelector("#testForm3")
+var testEl4 = document.querySelector("#testForm4")
+var testEl5 = document.querySelector("#testForm5")
 var formEl = document.querySelector(".form")
 var uhhEl = document.querySelector("#uhh")
 
@@ -24,9 +27,22 @@ function show(param_div_id) {
 function show1(param_div_id) {
     document.getElementById('question1').innerHTML = document.getElementById('question2').innerHTML;
     testEl2.style.display = 'flex';
-
 }
 
+function show2(param_div_id) {
+    document.getElementById('question2').innerHTML = document.getElementById('question3').innerHTML;
+    testEl3.style.display = 'flex';
+}
+
+function show3(param_div_id) {
+    document.getElementById('question3').innerHTML = document.getElementById('question4').innerHTML;
+    testEl4.style.display = 'flex';
+}
+
+function show4(param_div_id) {
+    document.getElementById('question4').innerHTML = document.getElementById('question5').innerHTML;
+    testEl5.style.display = 'flex';
+}
 
 
 //   function show(param_div_id) {
