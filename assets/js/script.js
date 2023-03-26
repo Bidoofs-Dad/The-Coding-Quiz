@@ -8,6 +8,8 @@ var testEl4 = document.querySelector("#testForm4")
 var testEl5 = document.querySelector("#testForm5")
 var formEl = document.querySelector(".form")
 var uhhEl = document.querySelector("#uhh")
+var timerCount = 5;
+var timerEl = document.querySelector("#timer");
 
 
 // startQuizEl.addEventListener("click", function(){
@@ -43,6 +45,21 @@ function show4(param_div_id) {
     document.getElementById('question4').innerHTML = document.getElementById('question5').innerHTML;
     testEl5.style.display = 'flex';
 }
+
+startQuizEl.addEventListener("click", function(){
+    function timerFunction(){
+        timerCount--;
+        timerEl.textContent = "Time: " + timerCount;
+        if (timerCount===0){
+            alert("YA FAILED YA GOOBER!")
+            clearTimeout(testTimer)
+        }
+    }
+    
+    var testTimer = setInterval(timerFunction, 1000);
+})
+
+
 
 
 //   function show(param_div_id) {
