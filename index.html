@@ -26,7 +26,7 @@
 
 
     <!-- This will be the basis for the buttons -->
-    <div class="form" id="question1">
+    <div id="question1">
         <form id="testForm">
             <h1>Question 1</h1>
             <input type="button" onclick="show1('question2')" name="choice" value="Answer 1">
@@ -36,7 +36,7 @@
         </form>
     </div>
 
-    <div class="form" id="question2">
+    <div id="question2">
         <form id="testForm2">
             <h1>Question 2 Did you notice it changed?!</h1>
             <input type="button" onclick="show2('question3')" name="choice" value="Answer 1">
@@ -46,7 +46,7 @@
         </form>
     </div>
 
-    <div class="form" id="question3">
+    <div id="question3">
         <form id="testForm3">
             <h1>Question 3</h1>
             <input type="button" onclick="show3('question4')" name="choice" value="Answer 1">
@@ -56,7 +56,7 @@
         </form>
     </div>
 
-    <div class="form" id="question4">
+    <div id="question4">
         <form id="testForm4">
             <h1>Question 4</h1>
             <input type="button" onclick="show4('question5')" name="choice" value="Answer 1">
@@ -66,15 +66,29 @@
         </form>
     </div>
 
-    <div class="form" id="question5">
+    <div id="question5">
         <form id="testForm5">
             <h1>Question 5</h1>
-            <input type="button" name="choice" value="Answer 1">
-            <input type="button" name="choice" value="Answer 2">
-            <input type="button" name="choice" value="Answer 3">
-            <input type="button" name="choice" value="Answer 4">
+            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 1">
+            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 2">
+            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 3">
+            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 4">
         </form>
     </div>
+
+    <div id="results">
+        <h1>You Finished!</h1>
+        <p>
+            Your final score is XX!
+        </p>
+        <div id="initials">
+            <h2>Enter Initials:</h2>
+            <textarea id="textarea"></textarea>
+            <button>Submit</button>
+        </div>
+    </div>
+
+
 
 
     <script src="assets/js/script.js"></script>

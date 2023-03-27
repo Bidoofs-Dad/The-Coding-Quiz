@@ -8,8 +8,10 @@ var testEl4 = document.querySelector("#testForm4")
 var testEl5 = document.querySelector("#testForm5")
 var formEl = document.querySelector(".form")
 var uhhEl = document.querySelector("#uhh")
-var timerCount = 5;
+var timerCount = 100;
 var timerEl = document.querySelector("#timer");
+var resultsEl = document.querySelector("#results");
+var initialsEl = document.querySelector("#initials");
 
 
 // startQuizEl.addEventListener("click", function(){
@@ -45,6 +47,21 @@ function show4(param_div_id) {
     document.getElementById('question4').innerHTML = document.getElementById('question5').innerHTML;
     testEl5.style.display = 'flex';
 }
+
+function show5(param_div_id) {
+    document.getElementById('question5').innerHTML = document.getElementById('results').innerHTML;
+    resultsEl.style.visibility = 'visible';
+    initialsEl.style.display = 'flex';
+    document.getElementById('question5').style.display = 'none';
+    
+    clearTimeout(testTimer);
+    
+    var testTimer = setInterval(timerFunction, 1000);
+
+
+}
+
+
 
 startQuizEl.addEventListener("click", function(){
     function timerFunction(){
