@@ -13,7 +13,9 @@ var timerEl = document.querySelector("#timer");
 var resultsEl = document.querySelector("#results");
 var initialsEl = document.querySelector("#initials");
 var testTimer;
-
+var wrongAnswerEl = document.querySelector(".wrongAnswer");
+var textAreaEl = document.querySelector("#textArea");
+var submitEl = document.querySelector("#submit");
 
 // startQuizEl.addEventListener("click", function(){
 //     h1El.style.display = 'none';
@@ -23,6 +25,9 @@ var testTimer;
 //     testEl.setAttribute("style", "display:flex")
     
 // })
+startQuizEl.addEventListener("click", function(){
+    testTimer = setInterval(timerFunction, 1000);
+})
 
 function show(param_div_id) {
     document.getElementById('uhh').innerHTML = document.getElementById('question1').innerHTML;
@@ -54,9 +59,12 @@ function show5(param_div_id) {
     resultsEl.style.visibility = 'visible';
     initialsEl.style.display = 'flex';
     document.getElementById('question5').style.display = 'none';
-    clearInterval(testTimer)
+    clearInterval(testTimer);
+    paragraphEl.textContent = "Your final score is " + timerCount + "!";
+    localStorage.setItem("finalScore", timerCount)
 
 }
+
 
 function timerFunction(wrongAnswer){
     if (wrongAnswer){
@@ -72,11 +80,11 @@ function timerFunction(wrongAnswer){
     }
 }
 
-
-
-startQuizEl.addEventListener("click", function(){
-     testTimer = setInterval(timerFunction, 1000);
+submitEl.addEventListener("click", function(){
+    localStorage.setItem(textAreaEl.value, timerCount);
+    textAreaEl.value = " ";
 })
+
 
 
 

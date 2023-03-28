@@ -17,7 +17,7 @@
 
     <div class="test" id="uhh">
         <h1 id="butts">Do You Know Coding??</h1>
-        <p id="paragraph">
+        <p>
             This is just a bunch of tester text right now! Crazy right?? Am I in over my head though? I am really
             worried that I might be.... Oh well, lets see what this looks like.
         </p>
@@ -29,62 +29,61 @@
     <div id="question1">
         <form id="testForm">
             <h1>Question 1</h1>
-            <input type="button" onclick="show1('question2')" name="choice" value="Answer 1">
-            <input type="button" onclick="show1('question2')" name="choice" value="Answer 2">
-            <input type="button" onclick="show1('question2')" name="choice" value="Answer 3">
-            <input type="button" onclick="show1('question2')" name="choice" value="Answer 4">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="Answer 1">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="Answer 2">
+            <input type="button" onclick="show1('question2')" name="choice" value="Correct">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="Answer 4">
         </form>
     </div>
 
     <div id="question2">
         <form id="testForm2">
             <h1>Question 2 Did you notice it changed?!</h1>
-            <input type="button" onclick="show2('question3')" name="choice" value="Answer 1">
-            <input type="button" onclick="show2('question3')" name="choice" value="Answer 2">
-            <input type="button" onclick="show2('question3')" name="choice" value="Answer 3">
-            <input type="button" onclick="show2('question3')" name="choice" value="Answer 4">
+            <input type="button" onclick="show2('question3')" name="choice" value="Correct">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="Answer 2">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="Answer 3">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="Answer 4">
         </form>
     </div>
 
     <div id="question3">
         <form id="testForm3">
             <h1>Question 3</h1>
-            <input type="button" onclick="show3('question4')" name="choice" value="Answer 1">
-            <input type="button" onclick="show3('question4')" name="choice" value="Answer 2">
-            <input type="button" onclick="show3('question4')" name="choice" value="Answer 3">
-            <input type="button" onclick="show3('question4')" name="choice" value="Answer 4">
+            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="Answer 1">
+            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="Answer 2">
+            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="Answer 3">
+            <input type="button" onclick="show3('question4')" name="choice" value="Correct">
         </form>
     </div>
 
     <div id="question4">
         <form id="testForm4">
             <h1>Question 4</h1>
-            <input type="button" onclick="show4('question5')" name="choice" value="Answer 1">
-            <input type="button" onclick="show4('question5')" name="choice" value="Answer 2">
-            <input type="button" onclick="show4('question5')" name="choice" value="Answer 3">
-            <input type="button" onclick="show4('question5')" name="choice" value="Answer 4">
+            <input type="button" onclick="show4('question5')" name="choice" value="Correct">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Answer 2">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Answer 3">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Answer 4">
         </form>
     </div>
 
     <div id="question5">
         <form id="testForm5">
             <h1>Question 5</h1>
-            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 1">
-            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 2">
-            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 3">
-            <input type="button" id="done" onclick="show5('results')" name="choice" value="Answer 4">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="Answer 1">
+            <input type="button" onclick="show5('results')" name="choice" value="Correct">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="Answer 3">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="Answer 4">
         </form>
     </div>
 
     <div id="results">
         <h1>You Finished!</h1>
-        <p>
-            Your final score is XX!
+        <p id="paragraph">
         </p>
         <div id="initials">
             <h2>Enter Initials:</h2>
-            <textarea id="textarea"></textarea>
-            <button>Submit</button>
+            <textarea id="textArea"></textarea>
+            <button id="submit">Submit</button>
         </div>
     </div>
 
