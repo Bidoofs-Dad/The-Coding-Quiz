@@ -1,4 +1,3 @@
-var h1El = document.querySelector("#butts")
 var startQuizEl = document.querySelector("#startQuiz")
 var paragraphEl = document.querySelector("#paragraph")
 var testEl = document.querySelector("#testForm")
@@ -16,6 +15,7 @@ var testTimer;
 var wrongAnswerEl = document.querySelector(".wrongAnswer");
 var textAreaEl = document.querySelector("#textArea");
 var submitEl = document.querySelector("#submit");
+var viewHighScoresEl = document.querySelector("#viewHighScores");
 
 // startQuizEl.addEventListener("click", function(){
 //     h1El.style.display = 'none';
@@ -61,10 +61,12 @@ function show5(param_div_id) {
     document.getElementById('question5').style.display = 'none';
     clearInterval(testTimer);
     paragraphEl.textContent = "Your final score is " + timerCount + "!";
-    localStorage.setItem("finalScore", timerCount)
-
 }
 
+function show6(param_div_id) {
+    document.getElementById('results').innerHTML = document.getElementById('highScores').innerHTML;
+    getElementById("highScores").style.display = 'block';
+}
 
 function timerFunction(wrongAnswer){
     if (wrongAnswer){
@@ -80,12 +82,15 @@ function timerFunction(wrongAnswer){
     }
 }
 
+
 submitEl.addEventListener("click", function(){
     localStorage.setItem(textAreaEl.value, timerCount);
     textAreaEl.value = " ";
+    var highScores = localStorage.getItem(textAreaEl.value)
+    var finalTestEl = document.querySelector("#append")
+
+finalTestEl.append(highScores);
 })
-
-
 
 
 //   function show(param_div_id) {

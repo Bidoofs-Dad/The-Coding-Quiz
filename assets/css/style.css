@@ -1,9 +1,16 @@
 .test {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 p{
     font-weight: bold;
+}
+
+#startParagraph {
+    max-width: 50%;
 }
 
 button {
@@ -74,4 +81,12 @@ input {
 
 textarea {
     font-size: 24px;
+}
+
+.finalButtons{
+    width: 250px;
+}
+
+#highScores {
+    display: none;
 }
