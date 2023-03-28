@@ -12,6 +12,7 @@ var timerCount = 100;
 var timerEl = document.querySelector("#timer");
 var resultsEl = document.querySelector("#results");
 var initialsEl = document.querySelector("#initials");
+var testTimer;
 
 
 // startQuizEl.addEventListener("click", function(){
@@ -53,29 +54,29 @@ function show5(param_div_id) {
     resultsEl.style.visibility = 'visible';
     initialsEl.style.display = 'flex';
     document.getElementById('question5').style.display = 'none';
-    
-    clearTimeout(testTimer);
-    
-    var testTimer = setInterval(timerFunction, 1000);
+    clearInterval(testTimer)
 
+}
 
+function timerFunction(wrongAnswer){
+    if (wrongAnswer){
+        timerCount = timerCount - 10;
+    }
+    else {
+        timerCount--;
+    }
+    timerEl.textContent = "Time: " + timerCount;
+    if (timerCount < 1){
+        alert("YA FAILED YA GOOBER!")
+        clearInterval(testTimer)
+    }
 }
 
 
 
 startQuizEl.addEventListener("click", function(){
-    function timerFunction(){
-        timerCount--;
-        timerEl.textContent = "Time: " + timerCount;
-        if (timerCount===0){
-            alert("YA FAILED YA GOOBER!")
-            clearTimeout(testTimer)
-        }
-    }
-    
-    var testTimer = setInterval(timerFunction, 1000);
+     testTimer = setInterval(timerFunction, 1000);
 })
-
 
 
 
