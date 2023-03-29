@@ -1,12 +1,11 @@
 var startQuizEl = document.querySelector("#startQuiz")
 var paragraphEl = document.querySelector("#paragraph")
-var testEl = document.querySelector("#testForm")
-var testEl2 = document.querySelector("#testForm2")
-var testEl3 = document.querySelector("#testForm3")
-var testEl4 = document.querySelector("#testForm4")
-var testEl5 = document.querySelector("#testForm5")
-var formEl = document.querySelector(".form")
-var uhhEl = document.querySelector("#uhh")
+var formEl = document.querySelector("#form1")
+var formEl2 = document.querySelector("#form2")
+var formEl3 = document.querySelector("#form3")
+var formEl4 = document.querySelector("#form4")
+var formEl5 = document.querySelector("#form5")
+var homeEl = document.querySelector("#home")
 var timerCount = 100;
 var timerEl = document.querySelector("#timer");
 var resultsEl = document.querySelector("#results");
@@ -18,47 +17,39 @@ var submitEl = document.querySelector("#submit");
 var viewHighScoresEl = document.querySelector("#viewHighScores");
 var clearButtonEl = document.querySelector("#clearButton");
 
-// startQuizEl.addEventListener("click", function(){
-//     h1El.style.display = 'none';
-//     // h1El.textContent = "TESTTTTTTT";
-//     paragraphEl.textContent = null;
-//     startQuizEl.setAttribute("style", "display:none");
-//     testEl.setAttribute("style", "display:flex")
-    
-// })
 startQuizEl.addEventListener("click", function(){
     testTimer = setInterval(timerFunction, 1000);
 })
 
-function show(param_div_id) {
-    document.getElementById('uhh').innerHTML = document.getElementById('question1').innerHTML;
-    testEl.style.display = 'flex';
+function next(param_div_id) {
+    document.getElementById('home').innerHTML = document.getElementById('question1').innerHTML;
+    formEl.style.display = 'flex';
 }
 
-function show1(param_div_id) {
+function next1(param_div_id) {
     document.getElementById('question1').innerHTML = document.getElementById('question2').innerHTML;
-    testEl2.style.display = 'flex';
+    formEl2.style.display = 'flex';
     // if (wrongAnswerEl){
     //     timerCount = timerCount - 10;
     // }
 }
 
-function show2(param_div_id) {
+function next2(param_div_id) {
     document.getElementById('question2').innerHTML = document.getElementById('question3').innerHTML;
-    testEl3.style.display = 'flex';
+    formEl3.style.display = 'flex';
 }
 
-function show3(param_div_id) {
+function next3(param_div_id) {
     document.getElementById('question3').innerHTML = document.getElementById('question4').innerHTML;
-    testEl4.style.display = 'flex';
+    formEl4.style.display = 'flex';
 }
 
-function show4(param_div_id) {
+function next4(param_div_id) {
     document.getElementById('question4').innerHTML = document.getElementById('question5').innerHTML;
-    testEl5.style.display = 'flex';
+    formEl5.style.display = 'flex';
 }
 
-function show5(param_div_id) {
+function next5(param_div_id) {
     document.getElementById('question5').innerHTML = document.getElementById('results').innerHTML;
     resultsEl.style.visibility = 'visible';
     initialsEl.style.display = 'flex';
@@ -67,7 +58,7 @@ function show5(param_div_id) {
     paragraphEl.textContent = "Your final score is " + timerCount + "!";
 }
 
-function show6(param_div_id) {
+function next6(param_div_id) {
     document.getElementById('results').innerHTML = document.getElementById('highScores').innerHTML;
 }
 
@@ -99,15 +90,6 @@ clearButtonEl.addEventListener("click", function(){
     localStorage.clear()
 })
 
-//   function show(param_div_id) {
-//     document.getElementById('form1').innerHTML = document.getElementById('form').innerHTML;
-//     testEl.style.display = 'flex';
-//     testEl2.style.display = 'none';
-//   }
-
-
-
-    // test.setAttribute("style", "display:flex");
     
 
 

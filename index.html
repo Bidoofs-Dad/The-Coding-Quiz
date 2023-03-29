@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Coding Quiz</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -15,75 +15,75 @@
         <span id="timer">Time:</span>
     </header>
 
-    <div class="test" id="uhh">
+    <div class="home" id="home">
         <h1>Do You Know Coding??</h1>
         <p id="startParagraph">
             Are you ready to test your coding knowledge? The next 5 questions will do just that! Click the button below and see how high of a score you can get!
         </p>
-        <button id="startQuiz" onclick="show('question1')">Start Quiz</button>
+        <button id="startQuiz" onclick="next('question1')">Start Quiz</button>
     </div>
 
 
     <!-- This will be the basis for the buttons -->
     <div id="question1">
-        <form id="testForm">
+        <form id="form1">
             <h1>How would you properly asign 'div id="tester"' as a variable?</h1>
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next1('question2')" name="choice"
                 value="var testerEl = div id='tester'">
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var id='tester'">
-            <input type="button" onclick="show1('question2')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next1('question2')" name="choice" value="var id='tester'">
+            <input type="button" onclick="next1('question2')" name="choice"
                 value="var testerEl = document.querySelector('#tester')">
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next1('question2')" name="choice"
                 value="var testerEl = .tester">
         </form>
     </div>
 
     <div id="question2">
-        <form id="testForm2">
+        <form id="form2">
             <h1>What are the main 2 uses of JSON?</h1>
-            <input type="button" onclick="show2('question3')" name="choice" value="parse & stringify">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="parse & array">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice"
+            <input type="button" onclick="next2('question3')" name="choice" value="parse & stringify">
+            <input type="button" class="wrongAnswer" onclick="next2('question3')" name="choice" value="parse & array">
+            <input type="button" class="wrongAnswer" onclick="next2('question3')" name="choice"
                 value="array & stringify">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next2('question3')" name="choice"
                 value="addEventListener & stringify">
         </form>
     </div>
 
     <div id="question3">
-        <form id="testForm3">
+        <form id="form3">
             <h1>What method adds text to your chosen variable?</h1>
-            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="display">
-            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="textInclude">
-            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="addText">
-            <input type="button" onclick="show3('question4')" name="choice" value="textContent">
+            <input type="button" class="wrongAnswer" onclick="next3('question4')" name="choice" value="display">
+            <input type="button" class="wrongAnswer" onclick="next3('question4')" name="choice" value="textInclude">
+            <input type="button" class="wrongAnswer" onclick="next3('question4')" name="choice" value="addText">
+            <input type="button" onclick="next3('question4')" name="choice" value="textContent">
         </form>
     </div>
 
     <div id="question4">
-        <form id="testForm4">
+        <form id="form4">
             <h1>What does 'localStorage.setItem(key, value)' do?</h1>
-            <input type="button" onclick="show4('question5')" name="choice"
+            <input type="button" onclick="next4('question5')" name="choice"
                 value="Stores the defined value inside of your local storage.">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next4('question5')" name="choice"
                 value="Pulls the selected value from your session storage.">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next4('question5')" name="choice"
                 value="Clears out the values in your local storage.">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next4('question5')" name="choice"
                 value="Stores the defined value inside of your session storage.">
         </form>
     </div>
 
     <div id="question5">
-        <form id="testForm5">
+        <form id="form5">
             <h1>From the following array, how would you view "Cat" inside of the console log? var animals = [Kitten,
                 Giraffe, Puppy, Cat, Axolotl]</h1>
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next5('results')" name="choice"
                 value="console.log(animals[0])">
-            <input type="button" onclick="show5('results')" name="choice" value="console.log(animals[3])">
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice"
+            <input type="button" onclick="next5('results')" name="choice" value="console.log(animals[3])">
+            <input type="button" class="wrongAnswer" onclick="next5('results')" name="choice"
                 value="console.log(animals[5])">
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice"
+            <input type="button" class="wrongAnswer" onclick="next5('results')" name="choice"
                 value="console.log(animals[4])">
         </form>
     </div>
