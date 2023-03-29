@@ -34,7 +34,8 @@ header {
 }
 
 #viewHighScores {
-    color: rgb(249, 42, 228);
+    color: rgb(41, 234, 89);
+    text-decoration: inherit;
 }
 
 /* The below will be the basis for the buttons of the questions */
@@ -93,5 +94,11 @@ textarea {
 }
 
 #highScores {
-    display: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#highScores button {
+    width: 190px;
 }

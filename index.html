@@ -11,15 +11,14 @@
 
 <body>
     <header>
-        <span id="viewHighScores">View High Scores</span>
+        <a href="./highScores.html"> <span id="viewHighScores">View High Scores</span></a>
         <span id="timer">Time:</span>
     </header>
 
     <div class="test" id="uhh">
         <h1>Do You Know Coding??</h1>
         <p id="startParagraph">
-            This is just a bunch of tester text right now! Crazy right?? Am I in over my head though? I am really
-            worried that I might be.... Oh well, lets see what this looks like.
+            Are you ready to test your coding knowledge? The next 5 questions will do just that! Click the button below and see how high of a score you can get!
         </p>
         <button id="startQuiz" onclick="show('question1')">Start Quiz</button>
     </div>
@@ -29,10 +28,13 @@
     <div id="question1">
         <form id="testForm">
             <h1>How would you properly asign 'div id="tester"' as a variable?</h1>
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var testerEl = div id='tester'">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice"
+                value="var testerEl = div id='tester'">
             <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var id='tester'">
-            <input type="button" onclick="show1('question2')" name="choice" value="var testerEl = document.querySelector('#tester')">
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var testerEl = .tester">
+            <input type="button" onclick="show1('question2')" name="choice"
+                value="var testerEl = document.querySelector('#tester')">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice"
+                value="var testerEl = .tester">
         </form>
     </div>
 
@@ -41,8 +43,10 @@
             <h1>What are the main 2 uses of JSON?</h1>
             <input type="button" onclick="show2('question3')" name="choice" value="parse & stringify">
             <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="parse & array">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="array & stringify">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="addEventListener & stringify">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice"
+                value="array & stringify">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice"
+                value="addEventListener & stringify">
         </form>
     </div>
 
@@ -59,20 +63,28 @@
     <div id="question4">
         <form id="testForm4">
             <h1>What does 'localStorage.setItem(key, value)' do?</h1>
-            <input type="button" onclick="show4('question5')" name="choice" value="Stores the defined value inside of your local storage.">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Pulls the selected value from your session storage.">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Clears out the values in your local storage.">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Stores the defined value inside of your session storage.">
+            <input type="button" onclick="show4('question5')" name="choice"
+                value="Stores the defined value inside of your local storage.">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice"
+                value="Pulls the selected value from your session storage.">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice"
+                value="Clears out the values in your local storage.">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice"
+                value="Stores the defined value inside of your session storage.">
         </form>
     </div>
 
     <div id="question5">
         <form id="testForm5">
-            <h1>From the following array, how would you view "Cat" inside of the console log? var animals = [Kitten, Giraffe, Puppy, Cat, Axolotl]</h1>
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="console.log(animals[0])">
+            <h1>From the following array, how would you view "Cat" inside of the console log? var animals = [Kitten,
+                Giraffe, Puppy, Cat, Axolotl]</h1>
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice"
+                value="console.log(animals[0])">
             <input type="button" onclick="show5('results')" name="choice" value="console.log(animals[3])">
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="console.log(animals[5])">
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="console.log(animals[4])">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice"
+                value="console.log(animals[5])">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice"
+                value="console.log(animals[4])">
         </form>
     </div>
 
@@ -83,19 +95,11 @@
         <div id="initials">
             <h2>Enter Initials:</h2>
             <textarea id="textArea"></textarea>
-            <button id="submit" onclick="show6('highScores')">Submit</button>
+            <a href="highScores.html">
+                <button id="submit">Submit</button>
+            </a>
         </div>
     </div>
-
-    <div id="highScores">
-        <h1>High Scores</h1>
-        <ul id="append">
-
-        </ul>
-        <button class="finalButtons">Go Back</button><button class="finalButtons">Clear high scores</button>
-
-    </div>
-
 
 
 

@@ -16,6 +16,7 @@ var wrongAnswerEl = document.querySelector(".wrongAnswer");
 var textAreaEl = document.querySelector("#textArea");
 var submitEl = document.querySelector("#submit");
 var viewHighScoresEl = document.querySelector("#viewHighScores");
+var clearButtonEl = document.querySelector("#clearButton");
 
 // startQuizEl.addEventListener("click", function(){
 //     h1El.style.display = 'none';
@@ -37,6 +38,9 @@ function show(param_div_id) {
 function show1(param_div_id) {
     document.getElementById('question1').innerHTML = document.getElementById('question2').innerHTML;
     testEl2.style.display = 'flex';
+    // if (wrongAnswerEl){
+    //     timerCount = timerCount - 10;
+    // }
 }
 
 function show2(param_div_id) {
@@ -91,6 +95,9 @@ submitEl.addEventListener("click", function(){
 finalTestEl.append(highScores);
 })
 
+clearButtonEl.addEventListener("click", function(){
+    localStorage.clear()
+})
 
 //   function show(param_div_id) {
 //     document.getElementById('form1').innerHTML = document.getElementById('form').innerHTML;
