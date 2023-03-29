@@ -28,51 +28,51 @@
     <!-- This will be the basis for the buttons -->
     <div id="question1">
         <form id="testForm">
-            <h1>Question 1</h1>
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="Answer 1">
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="Answer 2">
-            <input type="button" onclick="show1('question2')" name="choice" value="Correct">
-            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="Answer 4">
+            <h1>How would you properly asign 'div id="tester"' as a variable?</h1>
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var testerEl = div id='tester'">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var id='tester'">
+            <input type="button" onclick="show1('question2')" name="choice" value="var testerEl = document.querySelector('#tester')">
+            <input type="button" class="wrongAnswer" onclick="show1('question2')" name="choice" value="var testerEl = .tester">
         </form>
     </div>
 
     <div id="question2">
         <form id="testForm2">
-            <h1>Question 2 Did you notice it changed?!</h1>
-            <input type="button" onclick="show2('question3')" name="choice" value="Correct">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="Answer 2">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="Answer 3">
-            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="Answer 4">
+            <h1>What are the main 2 uses of JSON?</h1>
+            <input type="button" onclick="show2('question3')" name="choice" value="parse & stringify">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="parse & array">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="array & stringify">
+            <input type="button" class="wrongAnswer" onclick="show2('question3')" name="choice" value="addEventListener & stringify">
         </form>
     </div>
 
     <div id="question3">
         <form id="testForm3">
-            <h1>Question 3</h1>
-            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="Answer 1">
-            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="Answer 2">
-            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="Answer 3">
-            <input type="button" onclick="show3('question4')" name="choice" value="Correct">
+            <h1>What method adds text to your chosen variable?</h1>
+            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="display">
+            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="textInclude">
+            <input type="button" class="wrongAnswer" onclick="show3('question4')" name="choice" value="addText">
+            <input type="button" onclick="show3('question4')" name="choice" value="textContent">
         </form>
     </div>
 
     <div id="question4">
         <form id="testForm4">
-            <h1>Question 4</h1>
-            <input type="button" onclick="show4('question5')" name="choice" value="Correct">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Answer 2">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Answer 3">
-            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Answer 4">
+            <h1>What does 'localStorage.setItem(key, value)' do?</h1>
+            <input type="button" onclick="show4('question5')" name="choice" value="Stores the defined value inside of your local storage.">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Pulls the selected value from your session storage.">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Clears out the values in your local storage.">
+            <input type="button" class="wrongAnswer" onclick="show4('question5')" name="choice" value="Stores the defined value inside of your session storage.">
         </form>
     </div>
 
     <div id="question5">
         <form id="testForm5">
-            <h1>Question 5</h1>
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="Answer 1">
-            <input type="button" onclick="show5('results')" name="choice" value="Correct">
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="Answer 3">
-            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="Answer 4">
+            <h1>From the following array, how would you view "Cat" inside of the console log? var animals = [Kitten, Giraffe, Puppy, Cat, Axolotl]</h1>
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="console.log(animals[0])">
+            <input type="button" onclick="show5('results')" name="choice" value="console.log(animals[3])">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="console.log(animals[5])">
+            <input type="button" class="wrongAnswer" onclick="show5('results')" name="choice" value="console.log(animals[4])">
         </form>
     </div>
 

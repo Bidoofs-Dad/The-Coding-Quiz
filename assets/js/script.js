@@ -65,7 +65,6 @@ function show5(param_div_id) {
 
 function show6(param_div_id) {
     document.getElementById('results').innerHTML = document.getElementById('highScores').innerHTML;
-    getElementById("highScores").style.display = 'block';
 }
 
 function timerFunction(wrongAnswer){
