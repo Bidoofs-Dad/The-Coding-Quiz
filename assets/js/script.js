@@ -6,7 +6,7 @@ var formEl3 = document.querySelector("#form3")
 var formEl4 = document.querySelector("#form4")
 var formEl5 = document.querySelector("#form5")
 var homeEl = document.querySelector("#home")
-var timerCount = 100;
+var timerCount = 60;
 var timerEl = document.querySelector("#timer");
 var resultsEl = document.querySelector("#results");
 var initialsEl = document.querySelector("#initials");
@@ -17,13 +17,11 @@ var submitEl = document.querySelector("#submit");
 var viewHighScoresEl = document.querySelector("#viewHighScores");
 var clearButtonEl = document.querySelector("#clearButton");
 
-startQuizEl.addEventListener("click", function(){
-    testTimer = setInterval(timerFunction, 1000);
-})
-
+// The following 'next' functions are used to change between the different divs, such as 'home' to 'question1' all the way through to 'results'
 function next(param_div_id) {
     document.getElementById('home').innerHTML = document.getElementById('question1').innerHTML;
     formEl.style.display = 'flex';
+    testTimer = setInterval(timerFunction, 1000);
 }
 
 function next1(param_div_id, wrongAnswer) {
@@ -71,10 +69,7 @@ function next5(param_div_id, wrongAnswer) {
     
 }
 
-function next6(param_div_id) {
-    document.getElementById('results').innerHTML = document.getElementById('highScores').innerHTML;
-}
-
+//This is the timer function that defines the timer going down by one second, as well as defining 'wrongAnswer' as minusing ten seconds
 function timerFunction(wrongAnswer){
     if (wrongAnswer){
         timerCount = timerCount - 10;
@@ -89,20 +84,23 @@ function timerFunction(wrongAnswer){
     }
 }
 
-
-
-submitEl.addEventListener("click", function(){
-    localStorage.setItem(textAreaEl.value, timerCount);
+//This is the function that sets the score into local storage, it is also supposed to display your scores on the 'High Scores' page, but fails to do so currently
+function setHighScores(){
+    var testing = localStorage.setItem(textAreaEl.value, timerCount);
     textAreaEl.value = " ";
-    var highScores = localStorage.getItem(textAreaEl.value)
+    JSON.stringify(testing);
+   
+    var highScores = JSON.parse(testing);
     var finalTestEl = document.querySelector("#append")
 
 finalTestEl.append(highScores);
-})
+}
 
-clearButtonEl.addEventListener("click", function(){
-    localStorage.clear()
-})
+
+    //This clears your local storage, defined by clicking the 'Clear High Scores' button on the 'High Scores' page
+function clearLocalStorage(){
+    localStorage.clear();
+}
 
     
 

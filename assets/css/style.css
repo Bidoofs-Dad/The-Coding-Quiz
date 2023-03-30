@@ -38,16 +38,6 @@ header {
     text-decoration: inherit;
 }
 
-/* The below will be the basis for the buttons of the questions */
-/* .form {
-    display: flex;
-    justify-content: space-around;
-}
-form {
-    display: flex;
-    flex-direction: column;
-} */
-
 #form1,
 #form2,
 #form3,
