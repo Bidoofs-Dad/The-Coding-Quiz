@@ -40,4 +40,4 @@ In conclusion, I did enjoy putting this application together and I feel I had an
 
 Below is the link that will take you to the live website, hosted by GitHub Pages!
 
-https://bidoofs-dad.github.io/The-Coding-Quiz/index.html
+https://bidoofs-dad.github.io/The-Coding-Quiz/
