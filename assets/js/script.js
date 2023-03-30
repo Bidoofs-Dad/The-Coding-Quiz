@@ -26,36 +26,49 @@ function next(param_div_id) {
     formEl.style.display = 'flex';
 }
 
-function next1(param_div_id) {
+function next1(param_div_id, wrongAnswer) {
     document.getElementById('question1').innerHTML = document.getElementById('question2').innerHTML;
+    if (wrongAnswer){
+        timerFunction(true)
+    }
     formEl2.style.display = 'flex';
-    // if (wrongAnswerEl){
-    //     timerCount = timerCount - 10;
-    // }
 }
 
-function next2(param_div_id) {
+function next2(param_div_id, wrongAnswer) {
     document.getElementById('question2').innerHTML = document.getElementById('question3').innerHTML;
+    if (wrongAnswer){
+        timerFunction(true)
+    }
     formEl3.style.display = 'flex';
 }
 
-function next3(param_div_id) {
+function next3(param_div_id, wrongAnswer) {
     document.getElementById('question3').innerHTML = document.getElementById('question4').innerHTML;
+    if (wrongAnswer){
+        timerFunction(true)
+    }
     formEl4.style.display = 'flex';
 }
 
-function next4(param_div_id) {
+function next4(param_div_id, wrongAnswer) {
     document.getElementById('question4').innerHTML = document.getElementById('question5').innerHTML;
+    if (wrongAnswer){
+        timerFunction(true)
+    }
     formEl5.style.display = 'flex';
 }
 
-function next5(param_div_id) {
+function next5(param_div_id, wrongAnswer) {
     document.getElementById('question5').innerHTML = document.getElementById('results').innerHTML;
+    if (wrongAnswer){
+        timerFunction(true)
+    }
     resultsEl.style.visibility = 'visible';
     initialsEl.style.display = 'flex';
     document.getElementById('question5').style.display = 'none';
     clearInterval(testTimer);
     paragraphEl.textContent = "Your final score is " + timerCount + "!";
+    
 }
 
 function next6(param_div_id) {
@@ -75,6 +88,7 @@ function timerFunction(wrongAnswer){
         clearInterval(testTimer)
     }
 }
+
 
 
 submitEl.addEventListener("click", function(){
